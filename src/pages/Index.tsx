@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -23,8 +22,6 @@ const registrationSchema = z.object({
 type RegistrationFormValues = z.infer<typeof registrationSchema>;
 
 const Index = () => {
-  const [showAdDetails, setShowAdDetails] = useState(false);
-  
   const form = useForm<RegistrationFormValues>({
     resolver: zodResolver(registrationSchema),
     defaultValues: {
@@ -91,7 +88,7 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Registration & Ad Section */}
+        {/* Registration Form Section */}
         <section className="bg-gta-accent/10 py-12">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -148,41 +145,11 @@ const Index = () => {
                 </Form>
               </div>
               
-              {/* Advertisement Space */}
+              {/* Placeholder: Future use */}
               <div className="bg-secondary/50 p-6 rounded-lg border border-gta-accent/20">
-                <h2 className="gta-subtitle mb-4">Advertisement Space</h2>
+                <h2 className="gta-subtitle mb-4 text-right">مساحة مستقبلية</h2>
                 <div className="bg-gray-800/50 p-4 rounded-lg border border-dashed border-gta-accent/50 min-h-[200px] flex items-center justify-center">
-                  {showAdDetails ? (
-                    <div className="text-center">
-                      <h3 className="text-xl font-bold mb-2">Advertise With Us</h3>
-                      <p className="text-gray-300 mb-4">Reach thousands of GTA players daily</p>
-                      <ul className="text-left text-gray-300 mb-4">
-                        <li className="mb-1">• Premium banner placements</li>
-                        <li className="mb-1">• Targeted gaming audience</li>
-                        <li className="mb-1">• Affordable rates</li>
-                        <li className="mb-1">• Monthly & quarterly packages</li>
-                      </ul>
-                      <p className="text-gray-300 mb-3">Contact us at: <span className="text-gta-accent">ads@gtacheatvault.com</span></p>
-                      <Button 
-                        variant="outline" 
-                        className="border-gta-accent text-gta-accent hover:bg-gta-accent hover:text-white"
-                        onClick={() => setShowAdDetails(false)}
-                      >
-                        Close Details
-                      </Button>
-                    </div>
-                  ) : (
-                    <div className="text-center">
-                      <p className="text-xl font-bold mb-2">Your Ad Could Be Here</p>
-                      <Button 
-                        variant="outline" 
-                        className="border-gta-accent text-gta-accent hover:bg-gta-accent hover:text-white"
-                        onClick={() => setShowAdDetails(true)}
-                      >
-                        View Ad Details
-                      </Button>
-                    </div>
-                  )}
+                  <p className="text-gray-300 text-center">يمكنك استخدام هذه المساحة مستقبلاً</p>
                 </div>
               </div>
             </div>
