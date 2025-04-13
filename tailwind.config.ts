@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				gta: {
+					DEFAULT: '#121212',
+					accent: '#FC4C02',
+					blue: '#4169E1',
+					green: '#50C878',
+					purple: '#800080',
+					pink: '#FF69B4',
+					yellow: '#FFD700'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +94,23 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-neon': {
+					'0%, 100%': { 
+						textShadow: '0 0 4px #FC4C02, 0 0 11px #FC4C02, 0 0 19px #FC4C02',
+					},
+					'50%': {
+						textShadow: '0 0 4px #FC4C02, 0 0 10px #FC4C02'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-neon': 'pulse-neon 2s ease-in-out infinite'
+			},
+			fontFamily: {
+				gta: ['Bebas Neue', 'sans-serif']
 			}
 		}
 	},
