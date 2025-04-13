@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { 
-  Gamepad, Monitor, Smartphone, BadgePlaystation, 
-  GameController, Filter 
+  Gamepad, Monitor, Smartphone, Playstation, 
+  Xbox, Filter 
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -23,8 +23,8 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 const platformIcons: Record<Platform, React.ReactNode> = {
-  ps: <BadgePlaystation className="h-5 w-5" />,
-  xbox: <GameController className="h-5 w-5" />,
+  ps: <Playstation className="h-5 w-5" />,
+  xbox: <Xbox className="h-5 w-5" />,
   pc: <Monitor className="h-5 w-5" />,
   mobile: <Smartphone className="h-5 w-5" />
 };
