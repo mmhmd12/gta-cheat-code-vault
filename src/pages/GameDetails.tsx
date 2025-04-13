@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { 
   Gamepad, Monitor, Smartphone, 
-  Ghost, Controller, Filter 
+  Ghost, GameController, Filter 
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -24,7 +24,7 @@ import {
 
 const platformIcons: Record<Platform, React.ReactNode> = {
   ps: <Gamepad className="h-5 w-5" />,
-  xbox: <Controller className="h-5 w-5" />,
+  xbox: <Gamepad className="h-5 w-5" />,  // Using Gamepad for Xbox too since Controller isn't available
   pc: <Monitor className="h-5 w-5" />,
   mobile: <Smartphone className="h-5 w-5" />
 };
