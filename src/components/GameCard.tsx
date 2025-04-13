@@ -19,8 +19,8 @@ const platformIcons: Record<string, string> = {
 const GameCard: React.FC<GameCardProps> = ({ game }) => {
   return (
     <Link to={`/game/${game.id}`}>
-      <Card className="cheat-card h-full">
-        <div className="relative h-48 overflow-hidden">
+      <Card className="cheat-card h-full transition-transform hover:scale-[1.02] duration-200">
+        <div className="relative h-60 overflow-hidden rounded-t-lg">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ 

@@ -31,11 +31,11 @@ const Index = () => {
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/40 z-10" />
+          <div className="absolute inset-0 bg-black/60 z-10" />
           <div 
             className="absolute inset-0 bg-cover bg-center" 
             style={{ 
-              backgroundImage: 'url(/gta-banner.jpg)',
+              backgroundImage: 'url(/images/gta-banner.jpg)',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }} 

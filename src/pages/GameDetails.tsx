@@ -24,7 +24,7 @@ import {
 
 const platformIcons: Record<Platform, React.ReactNode> = {
   ps: <Gamepad className="h-5 w-5" />,
-  xbox: <Gamepad className="h-5 w-5" />,  // Using Gamepad for Xbox too since Controller isn't available
+  xbox: <Gamepad className="h-5 w-5" />,
   pc: <Monitor className="h-5 w-5" />,
   mobile: <Smartphone className="h-5 w-5" />
 };
@@ -87,31 +87,40 @@ const GameDetails = () => {
         
         {/* Game Header */}
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/60 z-10" />
+          <div className="absolute inset-0 bg-black/70 z-10" />
           <div 
-            className="absolute inset-0 bg-cover bg-center" 
+            className="absolute inset-0 bg-cover bg-center transform scale-105 blur-sm"
             style={{ 
               backgroundImage: `url(${game.image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }} 
           />
-          <div className="relative z-20 container mx-auto px-4 py-16">
-            <h1 className="gta-title mb-2">{game.title}</h1>
-            <p className="text-xl text-gray-200 mb-4">{game.description}</p>
-            <div className="flex flex-wrap items-center">
-              <div className="mr-6 mb-2">
-                <span className="text-gray-400 block text-sm">Release Year</span>
-                <span className="text-white font-bold">{game.releaseYear}</span>
-              </div>
-              <div className="mb-2">
-                <span className="text-gray-400 block text-sm">Available On</span>
-                <div className="flex space-x-2">
-                  {game.platforms.map(platform => (
-                    <div key={platform} className="text-white">
-                      {platformIcons[platform]}
-                    </div>
-                  ))}
+          <div className="relative z-20 container mx-auto px-4 py-16 flex flex-col md:flex-row items-center md:items-start gap-8">
+            <div className="w-48 h-64 rounded-md overflow-hidden shrink-0 shadow-2xl">
+              <img 
+                src={game.image} 
+                alt={game.title} 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h1 className="gta-title mb-2">{game.title}</h1>
+              <p className="text-xl text-gray-200 mb-4">{game.description}</p>
+              <div className="flex flex-wrap items-center">
+                <div className="mr-6 mb-2">
+                  <span className="text-gray-400 block text-sm">Release Year</span>
+                  <span className="text-white font-bold">{game.releaseYear}</span>
+                </div>
+                <div className="mb-2">
+                  <span className="text-gray-400 block text-sm">Available On</span>
+                  <div className="flex space-x-2">
+                    {game.platforms.map(platform => (
+                      <div key={platform} className="text-white">
+                        {platformIcons[platform]}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

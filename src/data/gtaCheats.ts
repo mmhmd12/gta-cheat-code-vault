@@ -34,7 +34,7 @@ export const games: GameInfo[] = [
     id: "gta5",
     title: "GTA V",
     releaseYear: "2013",
-    image: "/gta5.jpg",
+    image: "/images/gta5-cover.jpg",
     description: "Grand Theft Auto V is a 2013 action-adventure game set in the fictional state of San Andreas.",
     platforms: ["ps", "xbox", "pc"]
   },
@@ -42,7 +42,7 @@ export const games: GameInfo[] = [
     id: "gta4",
     title: "GTA IV",
     releaseYear: "2008",
-    image: "/gta4.jpg",
+    image: "/images/gta4-cover.jpg",
     description: "Grand Theft Auto IV follows Niko Bellic, an Eastern European immigrant who comes to Liberty City to pursue the American Dream.",
     platforms: ["ps", "xbox", "pc"]
   },
@@ -50,7 +50,7 @@ export const games: GameInfo[] = [
     id: "gtasa",
     title: "GTA San Andreas",
     releaseYear: "2004",
-    image: "/gtasa.jpg",
+    image: "/images/gtasa-cover.jpg",
     description: "Grand Theft Auto: San Andreas follows Carl Johnson's return to San Andreas after learning about his mother's murder.",
     platforms: ["ps", "xbox", "pc", "mobile"]
   },
@@ -58,7 +58,7 @@ export const games: GameInfo[] = [
     id: "gtavc",
     title: "GTA Vice City",
     releaseYear: "2002",
-    image: "/gtavc.jpg",
+    image: "/images/gtavc-cover.jpg",
     description: "Grand Theft Auto: Vice City is set in 1986 within the fictional Vice City, based on Miami.",
     platforms: ["ps", "xbox", "pc", "mobile"]
   },
@@ -66,7 +66,7 @@ export const games: GameInfo[] = [
     id: "gta3",
     title: "GTA III",
     releaseYear: "2001",
-    image: "/gta3.jpg",
+    image: "/images/gta3-cover.jpg",
     description: "Grand Theft Auto III follows Claude, a silent protagonist who was betrayed by his girlfriend in a bank heist and left for dead.",
     platforms: ["ps", "xbox", "pc", "mobile"]
   }
