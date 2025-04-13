@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { 
   Gamepad, Monitor, Smartphone, 
-  Ghost, GameController, Filter 
+  Ghost, Filter, ArrowLeft
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -33,6 +33,11 @@ const GameDetails = () => {
   const { gameId } = useParams<{ gameId: string }>();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1);
+  };
 
   if (!gameId) {
     return <Navigate to="/" />;
@@ -68,6 +73,18 @@ const GameDetails = () => {
       <Header onSearch={setSearchQuery} />
       
       <main className="flex-grow">
+        {/* Back Button */}
+        <div className="container mx-auto px-4 pt-4">
+          <Button 
+            variant="outline" 
+            className="flex items-center gap-2 hover:bg-gta-accent/10"
+            onClick={handleGoBack}
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back
+          </Button>
+        </div>
+        
         {/* Game Header */}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-black/60 z-10" />
